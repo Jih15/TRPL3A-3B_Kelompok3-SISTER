@@ -1,0 +1,76 @@
+Keamanan Sistem Terdistribusi
+
+Security (keamanan) secara umum adalah serangkaian langkah – langkah untuk menjamin privasi, 
+integritas dan ketersediaan sumber daya seperti obyek, database, server, proses, saluran,
+dan lain – lain yang melibatkan perlindungan benda dan mengamankan proses dan saluran komunikasi. 
+Tujuan utamanya adalah untuk membatasi akses informasi dan sumber hanya untuk pemakai
+yang memiliki hak akses.
+Pada sistem terdistribusi juga membutuhkan keamanan (security) fungsinya untuk melindungi
+dari kebocoran data (Kerahasiaan data), melindungi dari pengubahan dan interfrensi (Integritas) mis. 
+Data keuangan yang membutuhkan teknologi ekripsi dan informasi identitas dan mempertahankan 
+sistem tetap tersedia setiap saat dibutuhkan (Ketersediaan).
+
+
+1. Otentikasi (Authentication):
+Otentikasi adalah proses verifikasi identitas pengguna atau entitas sebelum 
+memberikan akses ke sistem. Ini memastikan bahwa hanya orang atau perangkat yang sah yang dapat masuk.
+Contoh: Ketika Anda masuk ke akun email Anda dengan memasukkan nama pengguna dan kata sandi.
+
+2. Otorisasi (Authorization):
+Otorisasi adalah tentang menentukan apa yang diizinkan oleh pengguna setelah mereka diotentikasi. 
+Ini mencakup pengaturan hak akses dan peran.
+Contoh: Ketika Anda masuk ke situs web perbankan Anda, Anda diotentikasi sebagai pemegang rekening. 
+Otorisasi kemudian menentukan apa yang bisa Anda lakukan, seperti transfer uang atau memeriksa saldo.
+
+3. Enkripsi Data:
+Enkripsi melibatkan pengkodean data sehingga hanya pihak yang berwenang yang dapat membacanya. 
+Ini melindungi kerahasiaan data selama pengiriman atau penyimpanan.
+Contoh: Ketika Anda berbelanja online dan mengisi rincian kartu kredit Anda, data ini dienkripsi selama proses transaksi untuk menghindari pencurian informasi.
+
+4. Perlindungan Terhadap Serangan (Attack Protection):
+Melibatkan langkah-langkah untuk mencegah atau mengatasi serangan terhadap sistem, seperti
+serangan DoS (Denial of Service) atau serangan malware.
+Contoh: Perangkat lunak firewall yang mendeteksi dan memblokir lalu lintas mencurigakan adalah 
+contoh perlindungan terhadap serangan.
+
+5. Pemantauan Keamanan (Security Monitoring):
+Ini melibatkan pemantauan berkelanjutan atas aktivitas sistem untuk mendeteksi peristiwa atau perilaku yang mencurigakan.
+Contoh: Log aktivitas yang dipantau secara real-time untuk mendeteksi upaya masuk tanpa izin atau perubahan konfigurasi yang tidak sah.
+
+6. Manajemen Identitas (Identity Management):
+ Manajemen identitas melibatkan pengelolaan informasi pengguna, peran, dan izin dalam sistem.
+ Contoh: Sistem manajemen identitas yang mengatur akses karyawan ke berbagai aplikasi dalam perusahaan.
+
+7. Pembaruan Perangkat Lunak (Software Updates):
+ Pembaruan perangkat lunak adalah langkah penting untuk mengatasi kerentanan keamanan yang ditemukan
+ dan menjaga sistem terdistribusi tetap aman.
+ Contoh: Menginstal pembaruan sistem operasi, perangkat lunak server, atau
+ aplikasi dengan patch keamanan terbaru.
+
+8. Firewall dan Segmentation:
+Firewall digunakan untuk mengatur lalu lintas jaringan dan membatasi akses antara segmen 
+jaringan yang berbeda.
+Contoh: Menggunakan firewall untuk memisahkan jaringan internal dari jaringan publik 
+dan mengizinkan akses hanya melalui aturan tertentu.
+
+9. Pengelolaan Kunci (Key Management):
+Ini melibatkan pengelolaan kunci enkripsi untuk melindungi data yang dienkripsi dengan kuat.
+Contoh: Penggunaan HSM (Hardware Security Module) untuk mengelola kunci enkripsi yang
+ digunakan dalam penyimpanan data yang sensitif.
+
+10. Backup dan Pemulihan (Backup and Recovery):
+Melakukan cadangan data secara teratur dan memiliki rencana pemulihan bencana untuk mengatasi
+ insiden keamanan atau bencana.
+Contoh: Rutin mencadangkan data penting ke server terpisah dan memiliki rencana pemulihan yang
+ diuji untuk mengembalikan sistem dalam keadaan darurat.
+
+11. Kepatuhan (Compliance):
+ Mematuhi regulasi dan standar keamanan yang berlaku untuk industri atau wilayah tertentu.
+Contoh: Mematuhi peraturan GDPR jika Anda mengumpulkan dan mengelola data pribadi pelanggan di Uni Eropa.
+
+12. Pelatihan Keamanan (Security Training):
+Melatih pengguna dan tim IT tentang praktik keamanan yang baik untuk mengurangi risiko serangan internal.
+Contoh: Mengadakan pelatihan keamanan rutin bagi karyawan untuk mengenali phishing dan praktik keamanan lainnya.
+
+
+Sumber : http://fryunfirst.blogspot.com/2015/06/keamanan-sistem-terdistribusi-security.html
