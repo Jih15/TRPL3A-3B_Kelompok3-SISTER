@@ -1,0 +1,181 @@
+Keamanan (Security) Sistem Terdistribusi 
+
+Security secara umum adalah serangkaian langkah-langkah untuk menjamin privasi,integritas dan ketersediaan sumber daya obyek, database,server,proses,sauran dan lain lain yang melibatkan perlindungan benda dan mengamankan proses dan saluran komunikasi
+
+tujuan utamanya adalah untuk membatasi akses informasi dan narasumber hanya untuk pemakai yang memiliki akses 
+
+fungsi :
+1. Melindungi data dari kebocoran yaitu pengambilan informasi oleh penerima yang tidak berhak
+2. pengubahan yaitu pengubahan informasi yang tidak legal
+3. Perusakan yaitu gangguan operasi sistem tertentu misalnya sipelaku tidak mengharapkan keuntungan apapun
+
+penyerangan pada sister :
+1. Penyerangan Pasif : mengamati komunikasi dan data
+2. Penyerangan aktif : Memodifikasi komunikasi atau data pemalsuan atau pengubahan 
+
+penyerangan juga sering terjadi pada transaksi elektronik, maka dari itu keamanan sangat dibutuhkan untuk banyak transaksi e-commerce, banking dan transaksi elektronik dapat aman jika dilindungi dengan kebijakan dan mekanisme keamanan, misalnya pembeli harus dilindungi terhadap penyikapan kode credit number selama pengiriman dan juga terhadap penjual yang tidak bersedia mengirim barang setelah menerima pembayaran. vendor harus mendapatkan pembayaran sebelum barang dikirim , sehingga perlu dapat memvalidasi calon pembeli sebelum member mereka hak akses.
+
+metode penyerangan :
+1. eavesdropping yaitu mendapatkan duplikasi pesan tanpa ijin
+2. Masquerading yaitu mengirim atau menerima pesan mengunakan identitas lain tanpa ijin mereka
+3. message tampering yaitu mencegat atau menangkap pesan dan mengubah isinya sebelum dilajukan ke penerima sebenarnya
+4. Replaying yaitu menyimpan pesan yang ditangkap untuk pemakaian nerikutnya 
+5. denail of service yaitu membanjiri saluran atau sumber lain dengan pesan yang bertujuan untuk menggalkan pengaksesan pemakai lainnya.
+
+
+Teknik keamanan 
+1. Enkripsi adalah proses pengkodean pesan untuk menyembunyikan isi.
+* Kunci kriptografi adalah parameter yang digunakan dalam algoritma enkripsi dimana hasil     engkripsi tidak dapat dideskripsi jika tanpa kunci yang sesuai 
+Algoritma Enkripsi :
+@. Shared Secret Key : Pengiriman dan penerima harus berbagi kunci dan diberikan kepada orang lain.
+@. Public/Private Key Pair : Pengiriman pesan menggunakan public key untuk mengekrip pesan.penerima menggunakan privat key yang cocok untuk mendeskrip pesan.
+
+Kriptografi Kunci Simetris
+Satu kunci digunakan dalam proses enkripsi dan deskripsi
+
+prinsip kerja :
+Pengiriman dan penerima sepakat menggunkan sistem kriptografi
+pengiriman dan pemerima sepakat menggunakan satu kunci tertentu
+dilakukan enkripsi sebelum pengiriman teks dan deskripsi setelaj diterima
+
+keuntungan :
+mekanisme sederhana
+kecepatan proses tinggi
+
+kelemahan :
+keamanan kunci
+distribusi kunci
+
+kriptografi kunci asimetris:
+enkripsi dan deskripsi tidak menggunkan kunci yang sama
+
+kriptografi kunci publik:
+kunci public:
+- untuk enkripsi
+- didistribusikam kepada public
+kunci private :
+- untuk deskirpsi
+- bersifat rahasia
+
+keuntungan public :
+-Keamanan kunci terjaga
+
+Kriptografi Hibrid
+- PGP (Pretty Good Privacy)
+ * Menggabungkan Keuntungan sitem kriptografi simestris dan asimetris
+ * Kunci sesi, kunci privat dan kunci public
+-Keuntungan :
+ * Dstribusi kunci terjaga
+ * Keamanan cukup tinggi karena enkripsi berlapis
+ * Kecepatan enkripsi dan deskripsi tinggi
+
+
+2. Autentikasi :untuk meyakinkan bahwa seorang itu benar dia adanya.
+Tujuan autentikasi : Menyakinkan sebuah layanan digunakan oleh orang-orang yang berhak 
+Contoh : autentikasi dengan sim/ktp untuk membuktikan kebenaran sipembawa
+
+3. Tanda Tangan Digital
+- memiliki fungsi yang mirip dengan tandatangan biasa
+- mejaga autentikasi menjaga integrita informasi
+- memberikan layanan non repudiation 
+
+Perancangan sistem yang aman 
+bertujuan mencgah seluruh serangan yang telah diketahui maupun yang akan dating
+- rancangan mengikuti standar yang ada
+- mendemokan validasi melawan ancaman yang ada
+- audit terhadap kegagalan yang terdeteksi.
+ada keseimbangan antara biaya terhadap serangan yang ada.
+beberapa rancangan sistem yang buruk
+1. antarmuka dibuka jaringan tidak aman
+2. membatasi waktu ruang linup setiap kunci rahasia
+3. algoritme kode program tersedia bagi penyerang
+4. penyerang memiliki akses ke sumber
+5. meminimalkan komputer yang menjadi inti implementasi sistem
+
+Contoh implemetasi
+1. Penerapan jaringan ATM,ATM tidak berhubungan langsung dengan database nasabah tetapi terhubung kemonitor teleprosesing monitor teleprosesing merupakan middleware yang mengatur komunikasi dengan client jarak jauh (remote) dan menserikan transaksi client untuk diproses oleh databse
+
+2. Permasalhan yang timbul dalam contoh sistem distribusi diatas:
+manajemen sistemnya lebih kompleks, biaya lebih besar, keamanan pada tiap anjungan tidak seaman apabila nasabah melakukan transaksi melalui teller.
+
+Keamanan dalam sistem terdistribusi 
+adalah suatu konsep yang sangat penting untuk memastikan bahwa data dan sumber daya sistem terlindungi dari akses yang tidak sah atau tindakan yang dapat membahayakan integritas, kerahasiaan, dan ketersediaannya. Berikut adalah beberapa aspek penting keamanan dalam sistem terdistribusi:
+
+Otentikasi (Authentication): Sistem terdistribusi harus memiliki mekanisme otentikasi yang kuat untuk memastikan bahwa pengguna atau entitas yang mencoba mengakses sistem adalah mereka yang mereka klaim.
+
+Otorisasi (Authorization): Setelah pengguna atau entitas terotentikasi, sistem harus memastikan bahwa mereka hanya memiliki akses terhadap sumber daya atau data tertentu sesuai dengan wewenang atau hak akses yang mereka miliki.
+
+Enkripsi (Encryption): Data yang dikirimkan antara entitas dalam sistem terdistribusi harus dienkripsi untuk mencegah pihak yang tidak berwenang dari membaca atau memanipulasi data tersebut.
+
+Integritas Data (Data Integrity): Mekanisme harus ada untuk memastikan bahwa data tidak mengalami perubahan atau manipulasi selama transit atau penyimpanan di sistem terdistribusi.
+
+Kerahasiaan Data (Data Confidentiality): Informasi sensitif harus dilindungi dari akses yang tidak sah, sehingga hanya orang-orang yang memiliki hak akses yang tepat yang dapat melihat atau mengakses data tersebut.
+
+Monitoring dan Audit (Monitoring and Auditing): Sistem harus dilengkapi dengan mekanisme pemantauan dan audit untuk mendeteksi dan mencatat aktivitas yang mencurigakan atau tidak sah. Ini membantu dalam identifikasi dan penanganan insiden keamanan.
+
+Firewall dan Perimeter Security: Sistem harus dilindungi dengan firewall dan mekanisme keamanan lainnya di tingkat jaringan untuk mengontrol akses dari dan ke luar sistem.
+
+Pembaruan dan Patching (Updates and Patching): Sistem terdistribusi harus terus diperbarui dengan patch keamanan terbaru untuk mengatasi kerentanan atau celah keamanan yang dapat dieksploitasi.
+
+Pengelolaan Kunci (Key Management): Manajemen kunci kriptografi adalah aspek kritis dari keamanan. Kunci harus dikelola dengan baik dan disimpan secara aman.
+
+Ketersediaan (Availability): Selain melindungi data dari akses yang tidak sah, sistem juga harus dirancang untuk memastikan ketersediaan yang tinggi sehingga layanan tetap dapat diakses ketika dibutuhkan.
+
+Pelatihan dan Kesadaran Keamanan (Security Training and Awareness): Pengguna dan administrator sistem terdistribusi harus diberikan pelatihan dan kesadaran keamanan untuk meminimalkan risiko insiden yang disebabkan oleh tindakan kelalaian manusia.
+
+Pengelolaan Insiden Keamanan (Security Incident Management): Sistem terdistribusi harus memiliki prosedur yang ditetapkan untuk menangani dan merespons insiden keamanan jika terjadi.
+
+Keamanan dalam sistem terdistribusi adalah upaya terus-menerus dan melibatkan kombinasi dari teknologi, kebijakan, dan tindakan manusia. Implementasi yang baik dari prinsip-prinsip keamanan ini akan membantu melindungi integritas dan keamanan sistem terdistribusi dari ancaman yang berpotensi merugikan.
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
