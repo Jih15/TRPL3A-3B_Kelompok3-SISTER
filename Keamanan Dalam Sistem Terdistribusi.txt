@@ -1,0 +1,66 @@
+"Enkripsi Dan Otorisasi"
+Enkripsi dan Otorisasi beperan penting dalam sistem terdistribusi untuk menjaga keamanan data dan mengatur akses ke sumber daya. Berikut adalah penjelasan singkat tentang keduanya :
+
+1. Enkripsi :
+	Proses mengubah data asli(teks biasa/data) menjadi bentuk ciphertext (tidak dapat dibaca) menggunakan algoritma khusus dan kunci enkripsi tertentu yang bertujuan untuk melindungi kerahasiaan data saat data tersebut berada dalam penyimpanan atau ditrasmisikan melalui jaringan. Hanya phak yang memiliki kunci enkripsi yang dapat melakukan dekripsi data kembali ke bentuk asalnya. enkripsi merupakan teknik yang sangat penting dalam pengamanan data sensitif, seperti data pribadi, perbankan dan bisnis.
+
+Sumber: "Cryptography and Network Security: Principles and Practice" by William Stallings.
+
+	Contoh Enkripsi :
+		-Pesan Teks 	 : Ketika kita mengirim pesan teks melalui layanan pesan instan seperti WhatsApp atau Telegram, pesan tersebut sering 
+			      	   dienkripsi di perangkat sebelum dikirim. Ini berarti pesan hanya dapat dibaca oleh penerima yang memiliki kunci enkripsi yang sesuai. 
+			      	   Misalnya, jika Anda mengirim "Halo" kepada seseorang, pesan tersebut akan diubah menjadi karakter-karakter acak yang hanya bisa dibaca oleh penerima.
+
+		-Lalu Lintas Web : Ketika Anda mengakses situs web yang menggunakan protokol HTTPS, 
+				   data yang ditransmisikan antara peramban Anda dan server web dienkripsi. 
+				   Ini menjaga privasi Anda saat melakukan transaksi online atau berbagi informasi sensitif 
+				   seperti kata sandi dan nomor kartu kredit.
+
+		-Basis Data 	 : Banyak basis data mengenkripsi data sensitif yang disimpan di dalamnya. 
+				   Misalnya, aplikasi perbankan akan mengenkripsi informasi akun pengguna seperti saldo dan riwayat transaksi 
+				   agar tidak dapat diakses oleh pihak yang tidak berwenang.
+
+2. Otorisasi :
+	Otorisasi adalah proses yang digunakan untuk mengatur dan mengendalikan akses ke sumber daya atau layanan dalam sistem terdistribusi. Ini melibatkan pemberian hak akses kepada pengguna atau entitas yang sah dan memastikan bahwa mereka hanya dapat melakukan tindakan yang sesuai dengan izin yang mereka miliki. Otorisasi sering kali melibatkan penggunaan kebijakan akses yang ditentukan sebelumnya, peran (role), atau hak akses berdasarkan identitas pengguna. Contoh penerapan otorisasi dapat ditemukan dalam sistem operasi, aplikasi web, basis data, dan berbagai komponen lain dalam ekosistem perangkat lunak terdistribusi.
+
+Sumber: "Authorization in Distributed Systems: A New Approach" by Maarten van Steen.
+
+	Contoh Otorisasi : 
+		- Sistem Operasi: Dalam sistem operasi seperti Windows atau Linux, administrator sistem memiliki hak akses penuh untuk mengontrol sumber daya komputer
+		                , sementara pengguna biasa memiliki hak akses yang terbatas. Otorisasi ini memungkinkan administrator untuk mengelola pengguna, 
+                                  file, dan aplikasi yang dapat diakses oleh pengguna biasa.
+
+		- Aplikasi Web: Misalkan Anda memiliki aplikasi web e-commerce. Otorisasi dapat digunakan untuk memastikan bahwa hanya pengguna yang masuk (login) 
+                                yang memiliki izin untuk menambahkan produk ke keranjang belanja, mengubah detail akun, atau melakukan transaksi.
+
+		- Basis Data: Dalam basis data, otorisasi digunakan untuk mengendalikan akses ke tabel atau data tertentu. 
+                              Sebagai contoh, hanya pengguna dengan peran "Administrator" yang memiliki izin untuk menghapus data, 
+                              sedangkan pengguna "Pegawai" hanya dapat membaca data atau mengedit data tertentu.
+
+		- Layanan Cloud: Ketika Anda menggunakan layanan cloud seperti AWS (Amazon Web Services) atau Azure, 
+                                 Anda dapat mengonfigurasi izin akses untuk pengguna dan layanan tertentu. 
+                                 Ini memungkinkan Anda untuk mengatur siapa yang boleh mengakses sumber daya cloud Anda dan dengan izin apa.
+
+"Enkripsi dan otorisasi bekerja bersama-sama dalam sistem terdistribusi untuk menjaga keamanan data. Data yang dienkripsi akan memerlukan otorisasi yang sesuai untuk mengaksesnya. Dengan kombinasi enkripsi dan otorisasi yang baik, sistem dapat melindungi data dari akses yang tidak sah dan memastikan bahwa hanya pihak yang berwenang yang dapat mengakses dan menggunakan sumber daya tersebut."
+
+"Manajemen Identifikasi"
+Manajemen identifikasi dalam sistem terdistribusi adalah proses mengidentifikasi, mengotentikasi, dan mengelola entitas atau pengguna yang berinteraksi dengan sistem tersebut. Tujuannya adalah untuk memastikan bahwa hanya entitas yang sah dan berwenang yang dapat mengakses sumber daya dan layanan dalam sistem. Berikut adalah penjelasan lebih lanjut tentang manajemen identifikasi beserta sumbernya:
+
+	- Identifikasi 
+		mengacu pada proses pengenalan entitas atau pengguna dalam sistem. Ini melibatkan memberikan suatu identitas unik kepada setiap entitas atau pengguna, seperti username, nomor identifikasi, atau alamat email.
+
+	- Otentikasi 
+		adalah proses verifikasi identitas entitas atau pengguna. Pengguna harus memberikan bukti otentikasi, seperti kata sandi, token, atau sidik jari, yang kemudian akan dibandingkan dengan data otentikasi yang tersimpan dalam sistem. Jika bukti otentikasi cocok, pengguna dianggap sah.
+
+	- Manajemen Identifikasi 
+		mencakup semua aspek pengelolaan identitas dan otentikasi dalam sistem terdistribusi. Ini termasuk pemberian hak akses, pengelolaan siklus hidup akun, dan pengelolaan izin berdasarkan peran atau kelompok pengguna.
+
+Sumber:
+
+1. "Identity and Access Management: Business Performance Through Connected Intelligence" by Prateek Bhajan**: Buku ini memberikan pandangan mendalam tentang manajemen identifikasi dan akses. Ini mencakup topik seperti Single Sign-On (SSO), manajemen kata sandi, serta strategi manajemen identifikasi dan akses yang efektif.
+
+2. "Identity and Access Management: A Systems Engineering Approach" by David E. Y. Sarna**: Buku ini membahas pendekatan sistemik terhadap manajemen identifikasi dan akses. Ini mencakup konsep-konsep seperti manajemen identifikasi berbasis kebijakan (policy-based identity management) dan metode-metode untuk mengintegrasikan manajemen identifikasi ke dalam sistem terdistribusi.
+
+3. Dokumentasi platform identifikasi dan otentikasi**: Berbagai platform dan layanan, seperti Active Directory, OAuth, OpenID Connect, dan lainnya, memiliki dokumentasi resmi yang merinci cara mengimplementasikan manajemen identifikasi dalam sistem terdistribusi. Dokumentasi ini seringkali mencakup panduan implementasi dan praktik terbaik.
+
+Manajemen identifikasi adalah bagian penting dari keamanan dan pengelolaan sumber daya dalam sistem terdistribusi, terutama ketika berbagai entitas dan pengguna harus berinteraksi dengan sistem secara aman dan efisien. Dengan menerapkan praktik-praktik manajemen identifikasi yang baik, organisasi dapat menjaga keamanan data dan sumber daya mereka.
