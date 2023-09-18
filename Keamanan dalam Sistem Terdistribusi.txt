@@ -1,0 +1,93 @@
+--Keamanan dalam Sistem Terdistribusi :
+=> Keamanan dalam sistem terdistribusi adalah konsep yang berkaitan 
+dengan upaya untuk melindungi informasi, sumber daya, dan layanan yang ada 
+dalam suatu sistem terdistribusi dari ancaman dan risiko yang berpotensi 
+merusak atau mengganggu operasinya. Sistem terdistribusi adalah sistem komputer 
+yang terdiri dari beberapa komputer atau node yang saling terhubung dan bekerja 
+sama untuk mencapai tujuan tertentu. Contoh sistem terdistribusi termasuk 
+jaringan komputer, cloud computing, grid computing, dan yang lainnya.
+
+-- Enskripsi dan Otorisasi :
+
+> Penyerangan pada Sistem Terdistribusi :
+- Penyerangan Pasif, hanya mengamati komunikasi atau data.
+- Penyerangan Aktif, secara aktif memodifikasi komunikasi atau data pemalsuan atau pengubahan
+
+Penyerangan juga sering terjadi pada transaksi elektronik, maka dari itu keamanan sangat dibutuhkan untuk banyak transsaksi e-commerce, banking, dan .
+Transaksi elektronik dapat aman jika dilindungi dengan kebijakan dan mekanisme keamanan, Misalnya pembeli harus dilindungi terhadap penyingkapan kode credit number selama pengiriman dan juga terhadap penjual yang tidak bersedia mengirim barang setelah menerima pembayaran. Vendor harus mendapatkan pembayaran sebelum barang dikirim, sehingga perlu dapat memvalidasi calon pembeli sebelum member mereka hak akses.
+
+> Metode Penyerangan :
+- Eavesdropping, yaitu mandapatkan duplikasi pesan tanpa ijin
+- Masquerading, yaitu mengirim atau menerima pesan menggunakan identitas lain tanpa ijin mereka
+- Message Tampering, yaitu mencegat atau menangkap pesan dan mengubah isinya sebelum dilanjutkan ke penerima sebenarnya. “Man-in-the-middle-attack” adalah bentuk message tampering dengan mencegat pesan pertama pada pertukaran kunci enkripsi pada pembetukan suatu saluran yang aman. Penyerang menyisipkan kunci lain yang memungkinkan dia mendekripsi pesan berikutnya sebelum di enkripsi oleh si penerima.
+- Replaying, yaitu menyimpan pesan yang ditangkap untuk pemakaian berikutnya
+- Denial of servive, yaitu membanjiri saluran atau sumber lain dengan pesan yang bertujuan untuk menggagalkan pengaksesan pemakai lain
+
+ENSKRIPSI : 
+adalah proses pengkodean pesan untuk menyembunyikan isi. Algoritma enkripsi modern menggunakan kunci (key).
+Kunci Kriptografi adalah parameter yang digunakan dalam algoritma enkripsi dimana hasil enkripsi tidak dapat dideskripsi jika tanpa kunci yang sesuai.
+
+Ada dua tipe Algoritma Enkripsi :
+- Shared Secret Key : Pengirim dan penerima harus berbagi kunci dan tidak diberikan kepada orang lain.
+- Public/privat key pair : Pengirim pesan menggunakan public key (kunci yang dipublikasikan ke penerima) untuk mengenkrip pesan. Penerima menggunakan privat key yang cocok (miliknya) untuk mendeskrip pesan.
+
+1. Public Key
+Pada metode ini, dibutuhkan 2 kunci yang berbeda untuk melakukan enkripsi suatu data. Kunci pertama ialah public key yang sifatnya umum dapat diberikan atau dibagi ke banyak orang, sedangkan kunci kedua ialah private key yang bersifat rahasia, tidak dapat dimiliki oleh banyak orang, bahkan seharusnya hanya dapat dimiliki oleh orang yang dituju. Private key berfungsi untuk mengenkripsi data, sedangkan public key digunakan untuk mendekripsi data. Kedua kunci ini terhubung secara sistematis.
+Misalnya, A (sender) akan mengirim sejumlah data kepada B (receiver). A telah mengenkripsi datanya dengan menggunakan public key yang ia miliki, dan mengirimkannya kepada B. B kemudian akan melakukan proses dekripsi data dengan menggunakan private key yang ia miliki. 
+
+2. Private Key
+Berbeda dengan public key, yang menggunakan dua kunci untuk melakukan proses enkripsi dan dekripsi data, pada private key hanya dibutuhkan satu kunci untuk dapat melakukan kedua proses tersebut. 
+Misalnya, A (sender) akan mengirim data kepada B (receiver), maka sebelum data itu dikirimkan atau dienkripsi, A harus terlebih dahulu membagikan private key yang dimilikinya kepada B agar dapat didekripsi oleh si B (penerima data). Dengan private key, kedua belah pihak dapat melakukan proses enkripsi maupun dekripsi data dengan menggunakan kunci yang sama. 
+
+> CONTOH IMPLEMENTASI
+Contoh : Penerapan jaringan ATM, ATM tidak berhubungan langsung dengan database nasabah tetapi terhubung kemonitor teleprosesing. Monitor teleprosessing merupakan middleware yang mengatur komunikasi dengan client jarak jauh (remote) dan menserikan transaksi client untuk diproses oleh database.
+Permasalahan yang timbul dalam contoh sistem distribusi diatas : Manajemen sistemnya lebih kompleks, biaya lebih besar, keamanan pada tiap anjungan tidak seaman apabila nasabah melakukan transaksi melalui teller.
+
+
+OTORISASI :
+
+Otorisasi adalah salah satu komponen penting dalam keamanan sistem terdistribusi. Ini adalah proses yang memungkinkan sistem untuk mengontrol akses pengguna atau entitas ke sumber daya yang ada dalam lingkungan terdistribusi. Tujuan utama dari otorisasi adalah memastikan bahwa hanya entitas yang diizinkan yang dapat mengakses sumber daya tersebut, dan ini merupakan langkah kunci dalam menjaga kerahasiaan, integritas, dan ketersediaan data dalam sistem terdistribusi.
+
+Berikut adalah beberapa metode umum yang digunakan dalam otorisasi dalam sistem terdistribusi:
+
+> Access Control Lists (ACLs): ACL adalah daftar aturan yang terkait dengan sumber daya tertentu. ACL ini menentukan entitas mana yang memiliki izin untuk mengakses atau memodifikasi sumber daya tersebut. ACL dapat diterapkan pada tingkat file, direktori, atau objek individual.
+
+> Role-Based Access Control (RBAC): RBAC adalah pendekatan di mana izin diberikan berdasarkan peran atau tanggung jawab pengguna dalam organisasi. Pengguna diberikan peran tertentu, dan izin yang sesuai diberikan kepada peran tersebut. Ini membuat manajemen izin lebih terstruktur dan dapat dikelola dengan lebih mudah dalam lingkungan terdistribusi yang besar.
+
+> Mandatory Access Control (MAC): MAC adalah pendekatan di mana sistem secara ketat mengendalikan akses berdasarkan label keamanan yang diterapkan pada entitas (seperti file atau proses). Ini digunakan dalam lingkungan yang memerlukan kontrol yang sangat ketat atas keamanan, seperti militer atau pemerintahan.
+
+> Attribute-Based Access Control (ABAC): ABAC adalah pendekatan yang lebih dinamis di mana izin diberikan berdasarkan atribut yang lebih luas, seperti waktu, lokasi, dan karakteristik lainnya. ABAC memungkinkan untuk penentuan izin yang lebih kompleks dengan mempertimbangkan berbagai faktor.
+
+> Policy-Based Access Control: Dalam pendekatan ini, aturan kebijakan sentral didefinisikan dan dikelola secara terpusat. Sistem akan mengikuti aturan kebijakan ini untuk menentukan izin akses. Ini memungkinkan fleksibilitas dalam mengubah aturan kebijakan tanpa perlu memodifikasi setiap entitas secara individual.
+
+> Token-Based Authorization: Ini adalah metode yang umumnya digunakan dalam lingkungan yang lebih terbuka seperti internet. Pengguna diberikan token otentikasi yang berisi informasi izin. Saat mengakses sumber daya, token ini diperiksa untuk memutuskan apakah pengguna memiliki izin yang sesuai.
+
+> Delegated Authorization: Dalam kasus ini, pengguna dapat memberikan hak akses yang mereka miliki kepada entitas lain. Misalnya, seorang pengguna dapat memberikan izin kepada kolega mereka untuk mengakses sumber daya tertentu.
+
+
+-- Manajemen Identitas
+
+Manajemen identitas adalah bagian penting dari keamanan dalam sistem terdistribusi. Ini berkaitan dengan pengelolaan informasi identitas pengguna dan entitas lain yang berinteraksi dengan sistem. Manajemen identitas memiliki beberapa tujuan utama, termasuk mengautentikasi identitas individu atau entitas, memberikan akses yang sesuai berdasarkan otorisasi, dan melacak aktivitas pengguna untuk tujuan audit dan keamanan. Berikut adalah beberapa metode dan konsep terkait dengan manajemen identitas dalam sistem terdistribusi:
+
+> Autentikasi (Authentication): Autentikasi adalah proses verifikasi identitas pengguna atau entitas. Metode autentikasi dapat bervariasi, termasuk penggunaan kata sandi, kunci enkripsi, biometrik (seperti sidik jari atau pemindaian wajah), atau otentikasi berbasis token (seperti kartu akses atau token otentikasi).
+
+> Single Sign-On (SSO): SSO adalah konsep di mana pengguna dapat mengakses berbagai layanan dan aplikasi dengan satu set kredensial autentikasi tunggal. Ini mengurangi beban penggunaan dan meningkatkan kenyamanan, sambil memastikan keamanan autentikasi yang kuat.
+
+> Manajemen Akses:
+
+>> Manajemen Identitas dan Akses (IAM): IAM adalah praktik yang mencakup manajemen identitas, otorisasi, dan hak akses entitas dalam sistem. Ini melibatkan pembuatan, manajemen, dan penghapusan akun pengguna, serta pengaturan izin akses yang sesuai.
+>> Provisioning dan Deprovisioning: Ini adalah proses otomatisasi pembuatan dan penghapusan akun pengguna dan hak akses seiring waktu. Ketika seorang pengguna bergabung dengan organisasi, akunnya diproses; ketika mereka pergi, akun mereka dihapus. Hal ini dapat dilakukan secara otomatis untuk mengurangi risiko keamanan.
+>> Federasi Identitas: Federasi identitas memungkinkan entitas yang berbeda (misalnya, organisasi atau penyedia layanan) untuk berbagi informasi identitas dan otentikasi secara aman. Ini memfasilitasi kerja sama lintas-organisasi tanpa perlu membuat akun baru untuk setiap layanan.
+
+> Kartu Identitas (Identity Cards): Kartu identitas digital adalah bentuk otentikasi yang menyimpan informasi identitas pengguna dan dapat digunakan untuk mengakses sumber daya yang berbeda dalam sistem terdistribusi. Ini dapat mencakup token otentikasi, kartu pintar, atau sertifikat digital.
+
+> Pemantauan dan Audit (Monitoring and Auditing): Manajemen identitas juga mencakup pemantauan aktivitas pengguna dan entitas terautentikasi untuk mendeteksi perilaku mencurigakan atau aktivitas yang melanggar kebijakan. Catatan audit dapat digunakan untuk investigasi dan pemantauan keamanan.
+
+> Kepatuhan (Compliance): Manajemen identitas harus mematuhi peraturan dan kebijakan yang berlaku, seperti Regulasi Umum Perlindungan Data (GDPR) di Eropa atau Standar Keamanan Data Kartu Pembayaran (PCI DSS) di industri kartu kredit.
+
+> Penyedia Identitas (Identity Providers - IdP): Penyedia Identitas adalah entitas yang menyediakan layanan autentikasi dan otentikasi kepada pengguna. Pengguna dapat mengakses berbagai layanan dengan menggunakan kredensial dari penyedia identitas mereka.
+
+
+
+
+
